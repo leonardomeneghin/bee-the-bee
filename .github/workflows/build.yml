@@ -132,8 +132,8 @@ jobs:
     needs: [build-linux, build-windows]
     runs-on: ubuntu-latest
     # Só faz deploy quando for push na main ou PRs na main
-    if: (github.event_name == 'push' && github.base_ref == 'main') 
-        || (github.event_name == 'pull_request' && github.base_ref == 'main')
+    if: (github.event_name == 'push' && github.ref == 'refs/heads/main') 
+        || (github.event_name == 'pull_request' && github.ref == 'refs/heads/main')
 
     steps:
       - name: Baixa build Linux
