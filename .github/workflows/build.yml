@@ -158,6 +158,9 @@ jobs:
         env:
           API_KEY_ITCH: ${{ secrets.API_KEY_ITCH }}
         run: |
+            pushd build/linux
+            zip -r ../../${{env.EXPORT_NAME}}-linux.zip .
+            popd
           ./butler push build/linux \
             ${{ env.ITCH_USER_NAME }}/${ env.EXPORT_NAME }:linux
 
@@ -165,5 +168,8 @@ jobs:
         env:
           API_KEY_ITCH: ${{ secrets.API_KEY_ITCH }}
         run: |
+            pushd build/windows
+            zip -r ../../${{env.EXPORT_NAME}}-windows.zip .
+            popd
           ./butler push build/windows \
             ${{ env.ITCH_USER_NAME }}/${{ env.EXPORT_NAME }}:windows
