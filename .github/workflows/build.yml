@@ -165,4 +165,4 @@ jobs:
           API_KEY_ITCH: ${{ secrets.API_KEY_ITCH }}
         run: |
           ./butler push build/windows \
-            ${{ env.ITCH_USER_NAME }}/${{} env.EXPORT_NAME }}:windows
+            ${{ env.ITCH_USER_NAME }}/${{ env.EXPORT_NAME }}:windows
