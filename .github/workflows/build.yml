@@ -11,7 +11,7 @@ on:
 env:
   GODOT_VERSION: "4.3"
   EXPORT_NAME: "bee-the-bee"
-  ITCH_USER_NAME: "meneghin"
+  ITCH_USER_NAME: "https://meneghin.itch.io"
   URL_BUTLER_ITCH: "https://broth.itch.zone/butler/linux-amd64/LATEST/archive/default"
 
 jobs:
