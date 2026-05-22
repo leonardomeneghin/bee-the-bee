@@ -68,27 +68,23 @@ visible = false
 visible = false
 
 [node name="Rural-landscape" type="Sprite2D" parent="."]
-visible = false
 show_behind_parent = true
 position = Vector2(1492, 792)
 texture = ExtResource("13_yq3gp")
 script = ExtResource("14_h85dv")
 
 [node name="F8HrUch9210722" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(1655.96, 607.322)
 scale = Vector2(0.739913, 0.998767)
 texture = ExtResource("14_cqfbm")
 
 [node name="F8HrUch9210723" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(2003, 862)
 rotation = 2.47307
 scale = Vector2(0.745462, 0.884923)
 texture = ExtResource("14_cqfbm")
 
 [node name="F8HrUch9210724" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(1312, 1470)
 rotation = 3.56878
 scale = Vector2(0.745462, 0.884923)
