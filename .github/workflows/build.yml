@@ -131,8 +131,8 @@ jobs:
     needs: [build-linux, build-windows, build-web]
     runs-on: ubuntu-latest
     # Só faz deploy quando for push na main ou PRs na main
-    if: (github.event_name == 'push' && github.ref == 'refs/heads/main')
-    if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "main"
+    if: (github.event_name == 'push' && github.ref == 'refs/heads/main') |
+        || ($CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "main")
 
     steps:
       - name: Baixa build Linux
