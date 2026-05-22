@@ -150,7 +150,7 @@ jobs:
 
       - name: Instala o butler
         run: |
-          curl -L -o butler.zip   
+          curl -L -o butler.zip ${{env.URL_BUTLER_ITCH}}
           unzip butler.zip
           chmod +x butler
 
