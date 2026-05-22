@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "bee-the-bee": {
+      "commandName": "Project"
+    },
+    "Start": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Users\\Leo\\Documents\\Dev\\Godot_v4.3-stable_mono_win64\\Godot_v4.3-stable_mono_win64.exe",
+      "commandLineArgs": "--path . --verbose\r\n",
+      "workingDirectory": ".",
+      "nativeDebugging": true
+    }
+  }
+}

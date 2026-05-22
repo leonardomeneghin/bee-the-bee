@@ -1,0 +1,15 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bd5as3xww0jch"]
+
+[ext_resource type="Texture2D" uid="uid://trx0u1kkpn0u" path="res://Arbol solo.png" id="1_xtpx6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_djrbn"]
+texture = ExtResource("1_xtpx6")
+margins = Vector2i(3, 2)
+texture_region_size = Vector2i(14, 15)
+use_texture_padding = false
+0:0/size_in_atlas = Vector2i(2, 2)
+0:0/0 = 0
+
+[resource]
+tile_size = Vector2i(25, 25)
+sources/1 = SubResource("TileSetAtlasSource_djrbn")

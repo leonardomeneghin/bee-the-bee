@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://dt0brmc6lvudf"]
+
+[ext_resource type="Script" path="res://scripts/UI/VhsViewport.cs" id="1_qnu1i"]
+[ext_resource type="Theme" uid="uid://bdcxn6qifxkg0" path="res://assets/resources/menu-theme.tres" id="3_84ccf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qvxyr"]
+
+[node name="vhs-viewport" type="Control" node_paths=PackedStringArray("score", "life")]
+material = SubResource("ShaderMaterial_qvxyr")
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.00068, 1.00426)
+script = ExtResource("1_qnu1i")
+score = NodePath("CenterContainer2/score")
+life = NodePath("CenterContainer/life")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 2
+offset_right = 138.0
+offset_bottom = 74.0
+theme = ExtResource("3_84ccf")
+
+[node name="life" type="Label" parent="CenterContainer"]
+layout_mode = 2
+theme = ExtResource("3_84ccf")
+theme_type_variation = &"TooltipLabel"
+text = "Life: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer2" type="CenterContainer" parent="."]
+layout_direction = 3
+layout_mode = 2
+offset_right = 150.0
+offset_bottom = 74.0
+theme = ExtResource("3_84ccf")
+
+[node name="score" type="Label" parent="CenterContainer2"]
+layout_mode = 2
+theme = ExtResource("3_84ccf")
+theme_type_variation = &"TooltipLabel"
+text = "Score:"
+horizontal_alignment = 1
+vertical_alignment = 1

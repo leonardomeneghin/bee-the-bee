@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://ckb7xvunbra1w"]
+
+[ext_resource type="FontFile" uid="uid://dwctl78k42ved" path="res://assets/UI/Linerama-Regular.ttf" id="1_7kc64"]
+
+[resource]
+font = ExtResource("1_7kc64")
+outline_size = 1

@@ -1,0 +1,100 @@
+[gd_scene load_steps=10 format=3 uid="uid://c2ngooojpf7oi"]
+
+[ext_resource type="PackedScene" uid="uid://dt0brmc6lvudf" path="res://scenes/UI/vhs-viewport.tscn" id="1_xp145"]
+[ext_resource type="Script" path="res://scripts/UI/Menu.cs" id="1_ycih2"]
+[ext_resource type="Texture2D" uid="uid://c4feqam7pj14j" path="res://assets/Landscape/rural-landscape.jpg" id="2_jsl61"]
+[ext_resource type="Theme" uid="uid://bdcxn6qifxkg0" path="res://assets/resources/menu-theme.tres" id="3_vhe0m"]
+[ext_resource type="AudioStream" uid="uid://cox75ehy31mf7" path="res://assets/Greenhouse.mp3" id="5_vjnua"]
+[ext_resource type="AudioStream" uid="uid://dx77k37w02bpk" path="res://assets/Forest_Ambience.mp3" id="6_8jr2a"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_m1eg5"]
+font_size = 94
+font_color = Color(0.980392, 0.976471, 0.964706, 1)
+
+[sub_resource type="InputEventAction" id="InputEventAction_lyi6y"]
+action = &"ui_cancel"
+
+[sub_resource type="Shortcut" id="Shortcut_h7n0o"]
+events = [SubResource("InputEventAction_lyi6y")]
+
+[node name="menu" type="CanvasLayer" node_paths=PackedStringArray("menuSong", "gameStartedSound", "texture")]
+process_mode = 3
+script = ExtResource("1_ycih2")
+menuSong = NodePath("AudioStreamPlayer")
+gameStartedSound = NodePath("AudioStreamPlayerPlaying")
+texture = NodePath("TextureRect")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+z_index = -1
+z_as_relative = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -133.333
+offset_bottom = 133.333
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_jsl61")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="vhs-viewport" parent="." instance=ExtResource("1_xp145")]
+theme = ExtResource("3_vhe0m")
+
+[node name="pause" type="CenterContainer" parent="."]
+process_mode = 3
+anchors_preset = -1
+anchor_top = -0.04375
+anchor_right = 1.0
+anchor_bottom = 1.05
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("3_vhe0m")
+metadata/_edit_use_anchors_ = true
+
+[node name="PanelContainer" type="PanelContainer" parent="pause"]
+clip_contents = true
+custom_minimum_size = Vector2(240, 200)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="pause/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="pause/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_vhe0m")
+text = "Main Menu"
+label_settings = SubResource("LabelSettings_m1eg5")
+horizontal_alignment = 1
+
+[node name="StartGame" type="Button" parent="pause/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_vhe0m")
+text = "Start Game"
+
+[node name="ResumeGame" type="Button" parent="pause/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+shortcut = SubResource("Shortcut_h7n0o")
+text = "Resume Game"
+
+[node name="QuitGame" type="Button" parent="pause/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit Game"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_vjnua")
+autoplay = true
+max_polyphony = 2
+
+[node name="AudioStreamPlayerPlaying" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_8jr2a")
+parameters/looping = true

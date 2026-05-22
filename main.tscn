@@ -1,0 +1,108 @@
+[gd_scene load_steps=21 format=3 uid="uid://c7y8vwdqiuf27"]
+
+[ext_resource type="Script" path="res://Main.cs" id="1_6savy"]
+[ext_resource type="Script" path="res://scripts/Behavior/CursorComposition.cs" id="1_bg18v"]
+[ext_resource type="Texture2D" uid="uid://bv2qob30t7ouq" path="res://assets/bee/fly_0.png" id="2_4sj2d"]
+[ext_resource type="Script" path="res://scripts/Behavior/MouseShape.cs" id="2_d8hq7"]
+[ext_resource type="Texture2D" uid="uid://dhuwt21b3ppax" path="res://assets/bee/fly_1.png" id="3_u8ph3"]
+[ext_resource type="Texture2D" uid="uid://ekvf05d65aky" path="res://assets/bee/fly_2.png" id="4_jku4l"]
+[ext_resource type="Script" path="res://scripts/Behavior/EnemyPathManager.cs" id="5_56dje"]
+[ext_resource type="Script" path="res://scripts/Behavior/FlowerPathManager.cs" id="6_mwnaf"]
+[ext_resource type="Script" path="res://scripts/Behavior/Patterns/EnemyPathPatternSquare.cs" id="6_wsw4x"]
+[ext_resource type="AudioStream" uid="uid://cij43vfwaql1b" path="res://assets/bee/bee_hurt.wav" id="7_4e3ja"]
+[ext_resource type="PackedScene" uid="uid://cqer04v52gl8s" path="res://scenes/PathInfiniteObject.tscn" id="7_r0ndt"]
+[ext_resource type="PackedScene" uid="uid://8503vneyk47q" path="res://scenes/UI/defeat_menu.tscn" id="7_ttqk0"]
+[ext_resource type="PackedScene" uid="uid://c2ngooojpf7oi" path="res://scenes/UI/menu.tscn" id="8_wrabj"]
+[ext_resource type="Texture2D" uid="uid://c4feqam7pj14j" path="res://assets/Landscape/rural-landscape.jpg" id="13_yq3gp"]
+[ext_resource type="Texture2D" uid="uid://4wo338t0vbm1" path="res://assets/playground/f8hr_uch9_210722.png" id="14_cqfbm"]
+[ext_resource type="Script" path="res://scripts/Gambiarras/RuralLandscape.cs" id="14_h85dv"]
+[ext_resource type="PackedScene" uid="uid://ugur55s2j6oj" path="res://scenes/enemy.tscn" id="16_wh158"]
+[ext_resource type="PackedScene" uid="uid://b12ctjwe4j1wg" path="res://scenes/FlowerCollectable.tscn" id="18_on7bc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_067fn"]
+radius = 20.0
+
+[sub_resource type="Curve2D" id="Curve2D_qdbdh"]
+_data = {
+"points": PackedVector2Array(-147.078, 134.35, 147.078, -134.35, -130, -144, -159.806, -87.6812, 159.806, 87.6812, 2750, -134, 83.4386, -144.25, -83.4386, 144.25, 2780, 1584, 193.747, 90.5097, -193.747, -90.5097, -124, 1572, -164.049, 210.718, 164.049, -210.718, -130, -144)
+}
+point_count = 5
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_6savy")
+
+[node name="Cursor" type="Node2D" parent="."]
+
+[node name="cursor-composition" type="Node" parent="Cursor"]
+script = ExtResource("1_bg18v")
+CursorFrames = Array[Texture2D]([ExtResource("2_4sj2d"), ExtResource("3_u8ph3"), ExtResource("4_jku4l")])
+
+[node name="MouseShape" type="Area2D" parent="Cursor"]
+script = ExtResource("2_d8hq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cursor/MouseShape"]
+shape = SubResource("CircleShape2D_067fn")
+
+[node name="HurtAudio" type="AudioStreamPlayer2D" parent="Cursor/MouseShape"]
+stream = ExtResource("7_4e3ja")
+
+[node name="FlowerPathManager" type="Node2D" parent="."]
+position = Vector2(872, 1517)
+rotation = -0.727203
+script = ExtResource("6_mwnaf")
+
+[node name="FlowerPathComponent" parent="FlowerPathManager" instance=ExtResource("7_r0ndt")]
+position = Vector2(-248.651, -717.902)
+
+[node name="EnemyPathManager" type="Node2D" parent="."]
+script = ExtResource("5_56dje")
+
+[node name="EnemyPathComponent" type="Path2D" parent="EnemyPathManager"]
+curve = SubResource("Curve2D_qdbdh")
+script = ExtResource("6_wsw4x")
+
+[node name="menu" parent="." instance=ExtResource("8_wrabj")]
+visible = false
+
+[node name="DefeatMenu" parent="." instance=ExtResource("7_ttqk0")]
+visible = false
+
+[node name="Rural-landscape" type="Sprite2D" parent="."]
+visible = false
+show_behind_parent = true
+position = Vector2(1492, 792)
+texture = ExtResource("13_yq3gp")
+script = ExtResource("14_h85dv")
+
+[node name="F8HrUch9210722" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1655.96, 607.322)
+scale = Vector2(0.739913, 0.998767)
+texture = ExtResource("14_cqfbm")
+
+[node name="F8HrUch9210723" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(2003, 862)
+rotation = 2.47307
+scale = Vector2(0.745462, 0.884923)
+texture = ExtResource("14_cqfbm")
+
+[node name="F8HrUch9210724" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1312, 1470)
+rotation = 3.56878
+scale = Vector2(0.745462, 0.884923)
+texture = ExtResource("14_cqfbm")
+
+[node name="FORCE" type="Node2D" parent="."]
+visible = false
+position = Vector2(6155, 1160)
+
+[node name="Enemy" parent="FORCE" instance=ExtResource("16_wh158")]
+position = Vector2(-186, 291)
+
+[node name="Flower" parent="FORCE" instance=ExtResource("18_on7bc")]
+position = Vector2(291, 637)
+
+[node name="FlowerPathComponent" parent="FORCE" instance=ExtResource("7_r0ndt")]
+position = Vector2(-186, 291)

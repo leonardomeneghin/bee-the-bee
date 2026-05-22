@@ -1,0 +1,23 @@
+Core looping: Desviar e ficar em cima de flor para ganhar pontos.
+3Cs:
+	- Camera: fixed screen
+	- Character: abelha que quer coletar pólen
+	- Control: Mouse é a abelha
+1) Abelha é o mouse (temos como alterar a arte e fazer animação)
+2) Padrões de flores aparecendo para gerar pontos
+3) UI -> pontos se jogador está dentro da área da flor
+4) Efeitos (pólen para sinalizar ao jogador que ele deve ir
+	até o local).
+5) Som (vôo, ao surgir flor, ao ficar em cima do objeto)
+6) Inimigos voando até a abelha para mata-la
+	- mouse já toma dano para inimigos
+
+# Se Sobrar tempo
+- Se implementar interface, desativar bordas
+
+Pontuação e vida
+Efeitos de som da abelha, do hit, de ganhar e de perder.
+Uma musica ambiente do jogo.
+Arte e sprites posicionados
+
+

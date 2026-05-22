@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://ugur55s2j6oj"]
+
+[ext_resource type="Script" path="res://scripts/Entities/Enemy.cs" id="1_iakdp"]
+[ext_resource type="Script" path="res://scripts/Behavior/HitAreaComposition.cs" id="2_ig42s"]
+[ext_resource type="SpriteFrames" uid="uid://ctoqrj3ouxu5p" path="res://assets/resources/flowers/bug_sprite_frames.tres" id="3_y1i2g"]
+[ext_resource type="AudioStream" uid="uid://dyxlr03c38uv5" path="res://assets/bug/bug_appear.wav" id="4_ierhm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kp8fu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5rjbt"]
+size = Vector2(11.4765, 13.1028)
+
+[node name="Enemy" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_iakdp")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ierhm")
+volume_db = -7.32
+autoplay = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("3_y1i2g")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.907407
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_kp8fu")
+disabled = true
+
+[node name="HitAreaComposition" type="Area2D" parent="."]
+scale = Vector2(3.72, 3.72)
+script = ExtResource("2_ig42s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitAreaComposition"]
+position = Vector2(-0.232202, 0.77702)
+rotation = 0.724279
+shape = SubResource("RectangleShape2D_5rjbt")
