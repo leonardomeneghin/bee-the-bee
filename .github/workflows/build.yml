@@ -11,10 +11,11 @@ on:
 env:
   GODOT_VERSION: "4.3"
   EXPORT_NAME: "bee-the-bee"
+  ITCH_USER_NAME: "meneghin"
 
 jobs:
   build-linux:
-    name: Build Linux
+    name: 🐧 Build Linux
     runs-on: ubuntu-latest
 
     steps:
@@ -32,6 +33,12 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y wget unzip
 
+      - name: Instala o butler
+        run: |
+          curl -L -o butler.zip https://broth.itch.ovh/butler/linux-amd64/LATEST/archive/default
+          unzip butler.zip
+          chmod +x butler
+          
       - name: Baixa o Godot
         run: |
           wget -q https://github.com/godotengine/godot/releases/download/${{ env.GODOT_VERSION }}-stable/Godot_v${{ env.GODOT_VERSION }}-stable_linux.x86_64.zip
@@ -63,3 +70,99 @@ jobs:
         with:
           name: linux-build
           path: build/linux/
+
+
+  build-windows:
+    name: 🪟 Build Windows
+    runs-on: ubuntu-latest   # pode buildar Windows a partir do Linux!
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.local/share/godot/export_templates
+          key: godot-templates-${{ env.GODOT_VERSION }}
+
+      - name: Instala dependências
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget unzip
+
+      - name: Instala o butler
+        run: |
+          curl -L -o butler.zip https://broth.itch.ovh/butler/linux-amd64/LATEST/archive/default
+          unzip butler.zip
+          chmod +x butler
+
+      - name: Baixa o Godot
+        run: |
+          wget -q https://github.com/godotengine/godot/releases/download/${{ env.GODOT_VERSION }}-stable/Godot_v${{ env.GODOT_VERSION }}-stable_linux.x86_64.zip
+          unzip -q Godot_v${{ env.GODOT_VERSION }}-stable_linux.x86_64.zip
+          mv Godot_v${{ env.GODOT_VERSION }}-stable_linux.x86_64 godot
+          chmod +x godot
+
+      - name: Baixa os Export Templates
+        run: |
+          mkdir -p ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable
+          wget -q https://github.com/godotengine/godot/releases/download/${{ env.GODOT_VERSION }}-stable/Godot_v${{ env.GODOT_VERSION }}-stable_export_templates.tpz
+          unzip -q Godot_v${{ env.GODOT_VERSION }}-stable_export_templates.tpz
+          mv templates/* ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable/
+
+      - name: Instala Wine (necessário para export Windows)
+        run: sudo apt-get install -y wine64
+
+      - name: Cria pasta de output
+        run: mkdir -p build/windows
+
+      - name: Exporta para Windows
+        run: |
+          ./godot --headless \
+            --export-release "Windows Desktop" \
+            build/windows/${{ env.EXPORT_NAME }}.exe
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-build
+          path: build/windows/
+  
+  deploy-itchio:
+    name: 🚀 Deploy para itch.io
+    needs: [build-linux, build-windows, build-web]
+    runs-on: ubuntu-latest
+    # Só faz deploy quando for push na main ou PRs na main
+    if: (github.event_name == 'push' && github.ref == 'refs/heads/main')
+    if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "main"
+
+    steps:
+      - name: Baixa build Linux
+        uses: actions/download-artifact@v4
+        with:
+          name: linux-build
+          path: build/linux
+
+      - name: Baixa build Windows
+        uses: actions/download-artifact@v4
+        with:
+          name: windows-build
+          path: build/windows
+
+      - name: Instala o butler
+        run: |
+          curl -L -o butler.zip https://broth.itch.ovh/butler/linux-amd64/LATEST/archive/default
+          unzip butler.zip
+          chmod +x butler
+
+      - name: Deploy Linux para itch.io
+        env:
+          API_KEY_ITCH: ${{ secrets.API_KEY_ITCH }}
+        run: |
+          ./butler push build/linux \
+            ${{ env.ITCH_USER_NAME }}/${ env.EXPORT_NAME }:linux
+
+      - name: Deploy Windows para itch.io
+        env:
+          API_KEY_ITCH: ${{ secrets.API_KEY_ITCH }}
+        run: |
+          ./butler push build/windows \
+            ${{ env.ITCH_USER_NAME }/${ env.EXPORT_NAME }:windows
