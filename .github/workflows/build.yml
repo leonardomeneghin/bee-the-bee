@@ -12,6 +12,7 @@ env:
   GODOT_VERSION: "4.3"
   EXPORT_NAME: "bee-the-bee"
   ITCH_USER_NAME: "meneghin"
+  URL_BUTLER_ITCH: "https://broth.itch.zone/butler/linux-amd64/LATEST/archive/default"
 
 jobs:
   build-linux:
@@ -35,7 +36,7 @@ jobs:
 
       - name: Instala o butler
         run: |
-          curl -L -o butler.zip https://broth.itch.ovh/butler/linux-amd64/LATEST/archive/default
+          curl -L -o butler.zip ${{env.URL_BUTLER_ITCH}}
           unzip butler.zip
           chmod +x butler
           
@@ -91,7 +92,7 @@ jobs:
 
       - name: Instala o butler
         run: |
-          curl -L -o butler.zip https://broth.itch.ovh/butler/linux-amd64/LATEST/archive/default
+          curl -L -o butler.zip ${{env.URL_BUTLER_ITCH}}
           unzip butler.zip
           chmod +x butler
 
