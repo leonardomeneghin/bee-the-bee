@@ -156,7 +156,7 @@ jobs:
 
       - name: Deploy Linux para itch.io
         env:
-          API_KEY_ITCH: ${{ secrets.API_KEY_ITCH }}
+          BUTLER_API_KEY: ${{ secrets.API_KEY_ITCH }}
         run: |
             pushd build/linux
             zip -r ../../${{env.EXPORT_NAME}}-linux.zip .
@@ -166,7 +166,7 @@ jobs:
 
       - name: Deploy Windows para itch.io
         env:
-          API_KEY_ITCH: ${{ secrets.API_KEY_ITCH }}
+          BUTLER_API_KEY: ${{ secrets.API_KEY_ITCH }}
         run: |
             pushd build/windows
             zip -r ../../${{ env.EXPORT_NAME }}-windows.zip .
