@@ -62,12 +62,17 @@ jobs:
           wget -q https://github.com/godotengine/godot/releases/download/${{ env.GODOT_VERSION }}-stable.mono/Godot_v${{ env.GODOT_VERSION }}-stable_mono_export_templates.tpz
           unzip -q Godot_v${{ env.GODOT_VERSION }}-stable_mono_export_templates.tpz
           mv templates/* ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable.mono/
-
+      # abre o projeto via CLI sem interface do editor
       - name: Importa o projeto
         run: ./godot --headless --editor --quit || true
 
+      #Cria a pasta onde será feito o deploy final
       - name: Cria pasta de output
         run: mkdir -p build/linux
+
+      #Compilar os scrips para que o godot possa usa-los
+      - name: Build C# do projeto
+        run: dotnet build
 
       - name: Exporta para Linux
         run: |
@@ -87,13 +92,14 @@ jobs:
     runs-on: ubuntu-latest   # pode buildar Windows a partir do Linux!
 
     steps:
+      
       - uses: actions/checkout@v4
 
       - uses: actions/cache@v4
         with:
           path: ~/.local/share/godot/export_templates
           key: godot-templates-${{ env.GODOT_VERSION }}
-
+    
       - name: Instala .NET SDK
         uses: actions/setup-dotnet@v4
         with:
@@ -125,11 +131,17 @@ jobs:
           unzip -q Godot_v${{ env.GODOT_VERSION }}-stable_mono_export_templates.tpz
           mv templates/* ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable.mono/
 
-      - name: Instala Wine (necessário para export Windows)
+      # Dependência necessárioa para exportar pra windows
+      - name: Instala Wine
         run: sudo apt-get install -y wine64
-
+      
+      #Cria a pasta onde será feito o deploy final
       - name: Cria pasta de output
         run: mkdir -p build/windows
+      
+      #Compilar os scrips para que o godot possa usa-los
+      - name: Build C# do projeto
+        run: dotnet build
 
       - name: Exporta para Windows
         run: |
