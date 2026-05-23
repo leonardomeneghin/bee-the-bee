@@ -31,6 +31,12 @@ point_count = 5
 [node name="main" type="Node2D"]
 script = ExtResource("1_6savy")
 
+[node name="Rural-landscape" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(1492, 792)
+texture = ExtResource("13_yq3gp")
+script = ExtResource("14_h85dv")
+
 [node name="Cursor" type="Node2D" parent="."]
 
 [node name="cursor-composition" type="Node" parent="Cursor"]
@@ -47,7 +53,6 @@ shape = SubResource("CircleShape2D_067fn")
 stream = ExtResource("7_4e3ja")
 
 [node name="FlowerPathManager" type="Node2D" parent="."]
-visible = false
 position = Vector2(872, 1517)
 rotation = -0.727203
 script = ExtResource("6_mwnaf")
@@ -56,7 +61,6 @@ script = ExtResource("6_mwnaf")
 position = Vector2(-248.651, -717.902)
 
 [node name="EnemyPathManager" type="Node2D" parent="."]
-visible = false
 script = ExtResource("5_56dje")
 
 [node name="EnemyPathComponent" type="Path2D" parent="EnemyPathManager"]
@@ -68,12 +72,6 @@ visible = false
 
 [node name="DefeatMenu" parent="." instance=ExtResource("7_ttqk0")]
 visible = false
-
-[node name="Rural-landscape" type="Sprite2D" parent="."]
-show_behind_parent = true
-position = Vector2(1492, 792)
-texture = ExtResource("13_yq3gp")
-script = ExtResource("14_h85dv")
 
 [node name="F8HrUch9210722" type="Sprite2D" parent="."]
 position = Vector2(1655.96, 607.322)
@@ -88,7 +86,7 @@ texture = ExtResource("14_cqfbm")
 
 [node name="F8HrUch9210724" type="Sprite2D" parent="."]
 position = Vector2(1312, 1470)
-rotation = 3.56878
+rotation = -2.71441
 scale = Vector2(0.745462, 0.884923)
 texture = ExtResource("14_cqfbm")
 
