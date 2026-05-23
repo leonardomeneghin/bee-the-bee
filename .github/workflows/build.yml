@@ -69,10 +69,6 @@ jobs:
       - name: Cria pasta de output
         run: mkdir -p build/linux
 
-      - name: 🔬 Verify Setup
-        run: |
-          dotnet --version
-          godot --version
       - name: Exporta para Linux
         run: |
           ./godot --headless \
