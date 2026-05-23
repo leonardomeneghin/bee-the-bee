@@ -9,6 +9,9 @@ on:
       - main
 
 env:
+  DOTNET_CLI_TELEMETRY_OPTOUT: true
+  DOTNET_NOLOGO: true
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
   GODOT_VERSION: "4.3"
   EXPORT_NAME: "bee-the-bee"
   ITCH_USER_NAME: "meneghin"
@@ -64,7 +67,11 @@ jobs:
 
       - name: Cria pasta de output
         run: mkdir -p build/linux
-
+        
+      - name: 🔬 Verify Setup
+        run: |
+          dotnet --version
+          godot --version
       - name: Exporta para Linux
         run: |
           ./godot --headless \
