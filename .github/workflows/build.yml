@@ -59,7 +59,7 @@ jobs:
       - name: Baixa os Export Templates
         run: |
           mkdir -p ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable.mono
-          wget -q https://github.com/godotengine/godot/releases/download/${{ env.GODOT_VERSION }}-stable.mono/Godot_v${{ env.GODOT_VERSION }}-stable_mono_export_templates.tpz
+          wget -q https://github.com/godotengine/godot/releases/download/${{ env.GODOT_VERSION }}-stable/Godot_v${{ env.GODOT_VERSION }}-stable_mono_export_templates.tpz
           unzip -q Godot_v${{ env.GODOT_VERSION }}-stable_mono_export_templates.tpz
           mv templates/* ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable.mono/
       # abre o projeto via CLI sem interface do editor
@@ -127,7 +127,7 @@ jobs:
       - name: Baixa os Export Templates
         run: |
           mkdir -p ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable.mono
-          wget -q https://github.com/godotengine/godot/releases/download/${{ env.GODOT_VERSION }}-stable.mono/Godot_v${{ env.GODOT_VERSION }}-stable_mono_export_templates.tpz
+          wget -q https://github.com/godotengine/godot/releases/download/${{ env.GODOT_VERSION }}-stable/Godot_v${{ env.GODOT_VERSION }}-stable_mono_export_templates.tpz
           unzip -q Godot_v${{ env.GODOT_VERSION }}-stable_mono_export_templates.tpz
           mv templates/* ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable.mono/
 
