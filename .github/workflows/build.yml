@@ -58,10 +58,10 @@ jobs:
 
       - name: Baixa os Export Templates
         run: |
-          mkdir -p ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable
-          wget -q https://github.com/godotengine/godot/releases/download/${{ env.GODOT_VERSION }}-stable/Godot_v${{ env.GODOT_VERSION }}-stable_mono_export_templates.tpz
+          mkdir -p ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable.mono
+          wget -q https://github.com/godotengine/godot/releases/download/${{ env.GODOT_VERSION }}-stable.mono/Godot_v${{ env.GODOT_VERSION }}-stable_mono_export_templates.tpz
           unzip -q Godot_v${{ env.GODOT_VERSION }}-stable_mono_export_templates.tpz
-          mv templates/* ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable/
+          mv templates/* ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable.mono/
 
       - name: Importa o projeto
         run: ./godot --headless --editor --quit || true
@@ -120,10 +120,10 @@ jobs:
 
       - name: Baixa os Export Templates
         run: |
-          mkdir -p ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable
-          wget -q https://github.com/godotengine/godot/releases/download/${{ env.GODOT_VERSION }}-stable/Godot_v${{ env.GODOT_VERSION }}-stable_mono_export_templates.tpz
+          mkdir -p ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable.mono
+          wget -q https://github.com/godotengine/godot/releases/download/${{ env.GODOT_VERSION }}-stable.mono/Godot_v${{ env.GODOT_VERSION }}-stable_mono_export_templates.tpz
           unzip -q Godot_v${{ env.GODOT_VERSION }}-stable_mono_export_templates.tpz
-          mv templates/* ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable/
+          mv templates/* ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable.mono/
 
       - name: Instala Wine (necessário para export Windows)
         run: sudo apt-get install -y wine64
