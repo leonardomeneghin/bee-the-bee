@@ -1,41 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Projetos\\games\\bee-the-bee\\",
+  "WorkspaceRootPath": "C:\\Projetos\\bee-the-bee\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|c:\\projetos\\games\\bee-the-bee\\scripts\\ui\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|c:\\projetos\\bee-the-bee\\scripts\\ui\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|solutionrelative:scripts\\ui\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|c:\\projetos\\games\\bee-the-bee\\scripts\\ui\\defeatmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|c:\\projetos\\bee-the-bee\\scripts\\behavior\\patterns\\flowerpathpatterninfinite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|solutionrelative:scripts\\behavior\\patterns\\flowerpathpatterninfinite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|c:\\projetos\\bee-the-bee\\scripts\\ui\\defeatmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|solutionrelative:scripts\\ui\\defeatmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|c:\\projetos\\games\\bee-the-bee\\scripts\\behavior\\hitareacomposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|c:\\projetos\\bee-the-bee\\scripts\\behavior\\hitareacomposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|solutionrelative:scripts\\behavior\\hitareacomposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|c:\\projetos\\games\\bee-the-bee\\scripts\\entities\\flower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|c:\\projetos\\bee-the-bee\\scripts\\entities\\flower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|solutionrelative:scripts\\entities\\flower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|c:\\projetos\\games\\bee-the-bee\\scripts\\behavior\\flowerpathmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|c:\\projetos\\bee-the-bee\\scripts\\behavior\\flowerpathmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|solutionrelative:scripts\\behavior\\flowerpathmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|c:\\projetos\\games\\bee-the-bee\\scripts\\behavior\\flowercollectableareacomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|c:\\projetos\\bee-the-bee\\scripts\\behavior\\flowercollectableareacomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|solutionrelative:scripts\\behavior\\flowercollectableareacomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|c:\\projetos\\games\\bee-the-bee\\scripts\\gambiarras\\rurallandscape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|c:\\projetos\\bee-the-bee\\scripts\\gambiarras\\rurallandscape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|solutionrelative:scripts\\gambiarras\\rurallandscape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|c:\\projetos\\games\\bee-the-bee\\scripts\\behavior\\dieontimeoutbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|c:\\projetos\\bee-the-bee\\scripts\\behavior\\dieontimeoutbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|solutionrelative:scripts\\behavior\\dieontimeoutbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|c:\\projetos\\games\\bee-the-bee\\scripts\\entities\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|c:\\projetos\\bee-the-bee\\scripts\\entities\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F32C130A-91BF-4529-B9B0-A20FBF2A70E8}|bee-the-bee.csproj|solutionrelative:scripts\\entities\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -46,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -55,10 +59,23 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "FlowerPathPatternInfinite.cs",
+              "DocumentMoniker": "C:\\Projetos\\bee-the-bee\\scripts\\Behavior\\Patterns\\FlowerPathPatternInfinite.cs",
+              "RelativeDocumentMoniker": "scripts\\Behavior\\Patterns\\FlowerPathPatternInfinite.cs",
+              "ToolTip": "C:\\Projetos\\bee-the-bee\\scripts\\Behavior\\Patterns\\FlowerPathPatternInfinite.cs",
+              "RelativeToolTip": "scripts\\Behavior\\Patterns\\FlowerPathPatternInfinite.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T01:15:01.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "DefeatMenu.cs",
-              "DocumentMoniker": "C:\\Projetos\\games\\bee-the-bee\\scripts\\UI\\DefeatMenu.cs",
+              "DocumentMoniker": "C:\\Projetos\\bee-the-bee\\scripts\\UI\\DefeatMenu.cs",
               "RelativeDocumentMoniker": "scripts\\UI\\DefeatMenu.cs",
-              "ToolTip": "C:\\Projetos\\games\\bee-the-bee\\scripts\\UI\\DefeatMenu.cs",
+              "ToolTip": "C:\\Projetos\\bee-the-bee\\scripts\\UI\\DefeatMenu.cs",
               "RelativeToolTip": "scripts\\UI\\DefeatMenu.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwC0AAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -66,11 +83,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "FlowerPathManager.cs",
-              "DocumentMoniker": "C:\\Projetos\\games\\bee-the-bee\\scripts\\Behavior\\FlowerPathManager.cs",
+              "DocumentMoniker": "C:\\Projetos\\bee-the-bee\\scripts\\Behavior\\FlowerPathManager.cs",
               "RelativeDocumentMoniker": "scripts\\Behavior\\FlowerPathManager.cs",
-              "ToolTip": "C:\\Projetos\\games\\bee-the-bee\\scripts\\Behavior\\FlowerPathManager.cs",
+              "ToolTip": "C:\\Projetos\\bee-the-bee\\scripts\\Behavior\\FlowerPathManager.cs",
               "RelativeToolTip": "scripts\\Behavior\\FlowerPathManager.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAADgvw0AAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -78,11 +95,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "FlowerCollectableAreaComponent.cs",
-              "DocumentMoniker": "C:\\Projetos\\games\\bee-the-bee\\scripts\\Behavior\\FlowerCollectableAreaComponent.cs",
+              "DocumentMoniker": "C:\\Projetos\\bee-the-bee\\scripts\\Behavior\\FlowerCollectableAreaComponent.cs",
               "RelativeDocumentMoniker": "scripts\\Behavior\\FlowerCollectableAreaComponent.cs",
-              "ToolTip": "C:\\Projetos\\games\\bee-the-bee\\scripts\\Behavior\\FlowerCollectableAreaComponent.cs",
+              "ToolTip": "C:\\Projetos\\bee-the-bee\\scripts\\Behavior\\FlowerCollectableAreaComponent.cs",
               "RelativeToolTip": "scripts\\Behavior\\FlowerCollectableAreaComponent.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -92,9 +109,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Menu.cs",
-              "DocumentMoniker": "C:\\Projetos\\games\\bee-the-bee\\scripts\\UI\\Menu.cs",
+              "DocumentMoniker": "C:\\Projetos\\bee-the-bee\\scripts\\UI\\Menu.cs",
               "RelativeDocumentMoniker": "scripts\\UI\\Menu.cs",
-              "ToolTip": "C:\\Projetos\\games\\bee-the-bee\\scripts\\UI\\Menu.cs",
+              "ToolTip": "C:\\Projetos\\bee-the-bee\\scripts\\UI\\Menu.cs",
               "RelativeToolTip": "scripts\\UI\\Menu.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -103,11 +120,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "RuralLandscape.cs",
-              "DocumentMoniker": "C:\\Projetos\\games\\bee-the-bee\\scripts\\Gambiarras\\RuralLandscape.cs",
+              "DocumentMoniker": "C:\\Projetos\\bee-the-bee\\scripts\\Gambiarras\\RuralLandscape.cs",
               "RelativeDocumentMoniker": "scripts\\Gambiarras\\RuralLandscape.cs",
-              "ToolTip": "C:\\Projetos\\games\\bee-the-bee\\scripts\\Gambiarras\\RuralLandscape.cs",
+              "ToolTip": "C:\\Projetos\\bee-the-bee\\scripts\\Gambiarras\\RuralLandscape.cs",
               "RelativeToolTip": "scripts\\Gambiarras\\RuralLandscape.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -115,11 +132,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Flower.cs",
-              "DocumentMoniker": "C:\\Projetos\\games\\bee-the-bee\\scripts\\Entities\\Flower.cs",
+              "DocumentMoniker": "C:\\Projetos\\bee-the-bee\\scripts\\Entities\\Flower.cs",
               "RelativeDocumentMoniker": "scripts\\Entities\\Flower.cs",
-              "ToolTip": "C:\\Projetos\\games\\bee-the-bee\\scripts\\Entities\\Flower.cs",
+              "ToolTip": "C:\\Projetos\\bee-the-bee\\scripts\\Entities\\Flower.cs",
               "RelativeToolTip": "scripts\\Entities\\Flower.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -127,11 +144,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "HitAreaComposition.cs",
-              "DocumentMoniker": "C:\\Projetos\\games\\bee-the-bee\\scripts\\Behavior\\HitAreaComposition.cs",
+              "DocumentMoniker": "C:\\Projetos\\bee-the-bee\\scripts\\Behavior\\HitAreaComposition.cs",
               "RelativeDocumentMoniker": "scripts\\Behavior\\HitAreaComposition.cs",
-              "ToolTip": "C:\\Projetos\\games\\bee-the-bee\\scripts\\Behavior\\HitAreaComposition.cs",
+              "ToolTip": "C:\\Projetos\\bee-the-bee\\scripts\\Behavior\\HitAreaComposition.cs",
               "RelativeToolTip": "scripts\\Behavior\\HitAreaComposition.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwBAAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -139,11 +156,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "DieOnTimeoutBehavior.cs",
-              "DocumentMoniker": "C:\\Projetos\\games\\bee-the-bee\\scripts\\Behavior\\DieOnTimeoutBehavior.cs",
+              "DocumentMoniker": "C:\\Projetos\\bee-the-bee\\scripts\\Behavior\\DieOnTimeoutBehavior.cs",
               "RelativeDocumentMoniker": "scripts\\Behavior\\DieOnTimeoutBehavior.cs",
-              "ToolTip": "C:\\Projetos\\games\\bee-the-bee\\scripts\\Behavior\\DieOnTimeoutBehavior.cs",
+              "ToolTip": "C:\\Projetos\\bee-the-bee\\scripts\\Behavior\\DieOnTimeoutBehavior.cs",
               "RelativeToolTip": "scripts\\Behavior\\DieOnTimeoutBehavior.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -151,11 +168,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Enemy.cs",
-              "DocumentMoniker": "C:\\Projetos\\games\\bee-the-bee\\scripts\\Entities\\Enemy.cs",
+              "DocumentMoniker": "C:\\Projetos\\bee-the-bee\\scripts\\Entities\\Enemy.cs",
               "RelativeDocumentMoniker": "scripts\\Entities\\Enemy.cs",
-              "ToolTip": "C:\\Projetos\\games\\bee-the-bee\\scripts\\Entities\\Enemy.cs",
+              "ToolTip": "C:\\Projetos\\bee-the-bee\\scripts\\Entities\\Enemy.cs",
               "RelativeToolTip": "scripts\\Entities\\Enemy.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
