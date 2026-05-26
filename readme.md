@@ -1,8 +1,9 @@
 # índice:
-- Requisitos
-- O que vamos fazer
-- passo-a-passo
-- referências bibliográficas
+- (Requisitos)[#requisitos]
+- (O que vamos fazer)[#o-que-vamos-fazer]
+- (dicas de segurança para evitar scam)[#dicas-de-segurança-para-evitar-scam]
+- (passo-a-passo)[#passo-a-passo]
+- (referências bibliográficas)[#referências-bibliográficas]
 
 # Requisitos:
 	Ter uma conta no https://itch.io/
@@ -100,6 +101,12 @@ Porque não tiramos as coisas do nada, usamos documentação para fundamentar no
 - (CICD no godot) [https://github.com/marketplace/actions/setup-godot-action]
 - claude code (sim, ele acelerou o desenvolvimento disso)
 - (guia markdown) [https://github.com/mende1/guia-definitivo-de-markdown/blob/master/README.md#c%C3%B3digos]
+
+# Autor
+Meneghin
+- (Linkedin)[https://www.linkedin.com/in/meneghin/]
+- (itch.io)[https://meneghin.itch.io/]
+- (github)[https://github.com/leonardomeneghin]
 
 
 
