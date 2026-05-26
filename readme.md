@@ -96,7 +96,14 @@ env:
 10. Agora você precisa testar seu primeiro build e ver se funciona. Na configuração atual, o build irá ocorrer automaticamente se você fizer um commit e fizer um PUSH na main.
 
 # o que esta acontecendo?
-De forma simples, estamos basicamente usando um ambiente em nuvem, dentro de um container, para copiar nosso projeto, baixar as dependências necessárias para fazer a integração na API do itch, inclusive baixar também, os templates do godot e o gzip para descompactar/compactar arquivos. Em seguida, usamos comandos de linha (CLI - Command Line Interface) do godot e do dotnet para gerar os binários e exportar nosso jogo, copiando para a pastinha build que criamos. Por fim, usamos a api no itch (butler) para enviar nossos builds, prontos para qualquer um baixar e se divertir!
+De forma simples, dentro de um container em um ambiente em nuvem, nesse container totalmente isolado de sistema operacional, estamos:
+- copiando nosso projeto para dentro do container
+- baixando as dependências necessárias para fazer a integração na API do itch
+- baixando os templates do godot
+- baixando unzip para descompactar/compactar arquivos. 
+- usamos comandos de linha (CLI - Command Line Interface) do godot e do dotnet para gerar os binários e exportar nosso jogo para as pastas de builds.
+- copiamos os builds gerados e enviamos pelo butler para o itch.io
+- Pronto! Nossa demo está On e pronto para divertir milhões de pessoas!
 
 # referencias:
 Porque não tiramos as coisas do nada, usamos documentação para fundamentar nossas ações.
