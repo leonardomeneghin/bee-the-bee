@@ -1,11 +1,11 @@
 # índice:
-- (requisitos)[#requisitos]
-- (O que vamos fazer)[#o-que-vamos-fazer]
-- (dicas de segurança para evitar scam)[#dicas-de-segurança-para-evitar-scam]
-- (passo-a-passo)[#passo-a-passo]
-- (o que esta acontecendo)[#o-que-esta-acontecendo]
-- (referencias)[#referencias]
-- (autor)[#autor]
+- [requisitos](#requisitos)
+- [O que vamos fazer](#o-que-vamos-fazer)
+- [dicas de segurança para evitar scam](#dicas-de-segurança-para-evitar-scam)
+- [passo-a-passo](#passo-a-passo)
+- [o que esta acontecendo][#o-que-esta-acontecendo)
+- [referencias](#referencias)
+- [autor](#autor)
 
 # requisitos:
 	Ter uma conta no https://itch.io/
