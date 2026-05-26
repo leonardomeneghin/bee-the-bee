@@ -1,11 +1,12 @@
 # índice:
-- [requisitos](#requisitos)
-- [O que vamos fazer](#o-que-vamos-fazer)
-- [dicas de segurança para evitar scam](#dicas-de-segurança-para-evitar-scam)
-- [passo-a-passo](#passo-a-passo)
-- [o que esta acontecendo](#o-que-esta-acontecendo)
-- [referencias](#referencias)
-- [autor](#autor)
+- (requisitos)[#requisitos]
+- (O que vamos fazer)[#o-que-vamos-fazer]
+- (dicas de segurança para evitar scam)[#dicas-de-segurança-para-evitar-scam]
+- (passo-a-passo)[#passo-a-passo]
+- (o que esta acontecendo)[#o-que-esta-acontecendo]
+- (referencias)[#referencias]
+- (autor)[#autor]
+
 # requisitos:
 	Ter uma conta no https://itch.io/
 	Ter uma conta no https://github.com/
@@ -108,7 +109,3 @@ Meneghin
 - (Linkedin)[https://www.linkedin.com/in/meneghin/]
 - (itch.io)[https://meneghin.itch.io/]
 - (github)[https://github.com/leonardomeneghin]
-
-
-
-
