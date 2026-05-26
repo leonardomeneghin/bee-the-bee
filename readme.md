@@ -1,17 +1,18 @@
 # índice:
-- (Requisitos)[#requisitos]
+- (requisitos)[#requisitos]
 - (O que vamos fazer)[#o-que-vamos-fazer]
 - (dicas de segurança para evitar scam)[#dicas-de-segurança-para-evitar-scam]
 - (passo-a-passo)[#passo-a-passo]
-- (referências bibliográficas)[#referências-bibliográficas]
-
-# Requisitos:
+- (o que esta acontecendo)[#o-que-esta-acontecendo]
+- (referencias)[#referencias]
+- (autor)[#autor]
+# requisitos:
 	Ter uma conta no https://itch.io/
 	Ter uma conta no https://github.com/
 	Ter um projeto no godot v4.3.stable.mono.official [77dcf97d8] 
 > note que se você trocar a versão, terá que modificar o build.yml para que o runner do github baixe o template correto! Ou irá dar erro. Ou seja, use a versão indicada.
 
-# O que vamos fazer:
+# o que vamos fazer:
 - Configurar template windows no seu projeto godot
 - Configurar template linux no seu projeto godot
 - criar o arquivo build.yml na pasta ".github/workflows"
@@ -29,7 +30,7 @@
 - não coloque seu token no código do repositório. Sério.
 - não adicione tokens de terceiros no seu projeto. O token é seu, você gera, você cuida, você organiza. O projeto é seu, o jogo é seu, a página é sua! Dê os créditos no itch.io, mas não fique 'sambando' com tokens no repositório.
 
-# passo-a-passo:
+# passo a passo:
 1. Crie um projeto em godot na versão 4.3 que utilize Csharp com monogame. Existem diversos tutoriais na internet de como baixar e configurar.
 2. Com seu projeto em mãos, abra o godot e configure um template seguindo os passos abaixo:
 3. Instale o modelo usando os seguintes passos:
@@ -93,21 +94,17 @@ env:
 
 10. Agora você precisa testar seu primeiro build e ver se funciona. Na configuração atual, o build irá ocorrer automaticamente se você fizer um commit e fizer um PUSH na main.
 
-## O que está acontecendo?
+# o que esta acontecendo?
 De forma simples, estamos basicamente usando um ambiente em nuvem, dentro de um container, para copiar nosso projeto, baixar as dependências necessárias para fazer a integração na API do itch, inclusive baixar também, os templates do godot e o gzip para descompactar/compactar arquivos. Em seguida, usamos comandos de linha (CLI - Command Line Interface) do godot e do dotnet para gerar os binários e exportar nosso jogo, copiando para a pastinha build que criamos. Por fim, usamos a api no itch (butler) para enviar nossos builds, prontos para qualquer um baixar e se divertir!
 
-# Referências:
+# referencias:
 Porque não tiramos as coisas do nada, usamos documentação para fundamentar nossas ações.
 - (CICD no godot) [https://github.com/marketplace/actions/setup-godot-action]
 - claude code (sim, ele acelerou o desenvolvimento disso)
 - (guia markdown) [https://github.com/mende1/guia-definitivo-de-markdown/blob/master/README.md#c%C3%B3digos]
 
-# Autor
+# autor
 Meneghin
 - (Linkedin)[https://www.linkedin.com/in/meneghin/]
 - (itch.io)[https://meneghin.itch.io/]
 - (github)[https://github.com/leonardomeneghin]
-
-
-
-
