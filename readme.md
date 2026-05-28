@@ -113,8 +113,9 @@ Porque não tiramos as coisas do nada, usamos documentação para fundamentar no
 - claude code (sim, ele acelerou o desenvolvimento disso)
 - (guia markdown) [https://github.com/mende1/guia-definitivo-de-markdown/blob/master/README.md#c%C3%B3digos]
 
+
 # autor
-Meneghin
+Meneghin (obrigado por ver meu tutorialzin)
 - (Linkedin)[https://www.linkedin.com/in/meneghin/]
 - (itch.io)[https://meneghin.itch.io/]
 - (github)[https://github.com/leonardomeneghin]
